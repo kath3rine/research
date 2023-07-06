@@ -46,7 +46,7 @@ clc;
 stdIMG = std(double(IMG),0,3);
 pause(0.001); 
 clc
-disp(meanIMG);
+disp(stdIMG(1, :));
 disp('Loading Image Complete'); 
 %% (SJG added) measure varriance of image
 %https://en.wikipedia.org/wiki/Coefficient_of_variation#Similar_ratios
