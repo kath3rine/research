@@ -46,6 +46,7 @@ clc;
 stdIMG = std(double(IMG),0,3);
 pause(0.001); 
 clc
+disp(meanIMG);
 disp('Loading Image Complete'); 
 %% (SJG added) measure varriance of image
 %https://en.wikipedia.org/wiki/Coefficient_of_variation#Similar_ratios
@@ -539,7 +540,7 @@ for nn = 1:numNeurons
     for i = 1:length(r)
         tmpPixels(i,:) = IMG(r(i),c(i),:);
     end
-    rawFluo(:,nn) = nanmean(tmpPixels,1);
+    rawFluo(:,nn) = mean(tmpPixels,1);
     
 end
 
